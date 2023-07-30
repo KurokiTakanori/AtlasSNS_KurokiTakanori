@@ -29,6 +29,10 @@ Route::post('/register', 'Auth\RegisterController@register');
 Route::get('/added', 'Auth\RegisterController@added');
 Route::post('/added', 'Auth\RegisterController@added');
 
+Route::get('/', function () {
+    return view('posts.index');
+})->name('login');
+
 //ログイン中のページ
 Route::get('/top','PostsController@index');
 
